@@ -49,7 +49,7 @@ class VCMostrarTable: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    private func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+  /*  private func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let contexto = conexion()
         let res = resp[indexPath.row]
         
@@ -67,7 +67,7 @@ class VCMostrarTable: UIViewController, UITableViewDelegate, UITableViewDataSour
         mostrarDatos()
         tabView.reloadData()
         
-    }
+    }*/
     
     func mostrarDatos(){
         let contexto = conexion()
@@ -76,6 +76,9 @@ class VCMostrarTable: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         do {
             resp = try contexto.fetch(fetchRequest)
+            for i in resp {
+                print(i.nombre)
+            }
             
         } catch let error as NSError {
             print("no mostro nada", error)

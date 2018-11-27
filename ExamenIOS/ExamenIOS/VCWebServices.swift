@@ -68,7 +68,7 @@ class VCWebServices: UIViewController {
         
     }
     
-    func descargaZip(parSalida: ParSalida){
+    func descargaZip (parSalida: ParSalida){
         var obDescarga:descarga = descarga()
         
         obDescarga.descargar2(parSalida.valueResponse, handler: { (textoDecomprimido:String) in

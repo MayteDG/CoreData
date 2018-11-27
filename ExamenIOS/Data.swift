@@ -18,8 +18,6 @@ class ParSalida {
 class  descarga {
     func descargar ( URL: String ) -> String {
         
-        
-        
         return "Descargado"
     }
     
